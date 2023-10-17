@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - 5555:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_DB: wish
+      DATABASE_URL: postgresql://postgres:pass123@localhost:5555/wish?schema=public
+
+
+ 
+#  api:
+#    build:
+#      dockerfile: Dockerfile
+#      context: .
+#    volumes:
+#      - /app/node_modules
+#
+#    environment:
+#      REDISHOST: ${REDISHOST}
+#      REDISPORT: ${REDISPORT}
+#      PGDATABASE: ${PGDATABASE}
+#      PGHOST: ${PGHOST}
+#      PGPASSWORD: ${PGPASSWORD}
+#      PGPORT: ${PGPORT}
+#      PGUSER: ${PGUSER}
+#      DATABASE_URL: ${DATABASE_URL}
+#      JWT_SECRET: ${JWT_SECRET}
+#      JWT_TOKEN_AUDIENCE: ${JWT_TOKEN_AUDIENCE}
+#      JWT_TOKEN_ISSUER: ${JWT_TOKEN_ISSUER}
+#      JWT_ACCESS_TOKEN_TTL: ${JWT_ACCESS_TOKEN_TTL}
+#      JWT_REFRESH_TOKEN_TTL: ${JWT_REFRESH_TOKEN_TTL}
+#      TFA_APP_NAME: ${TFA_APP_NAME}
+#      EMAIL_HOST: ${EMAIL_HOST}
+#      EMAIL_PORT: ${EMAIL_PORT}
+#      EMAIL_SECURE: ${EMAIL_SECURE}
+#      EMAIL_AUTH_TYPE: ${EMAIL_AUTH_TYPE}
+#      EMAIL_SENDER: ${EMAIL_SENDER}
+#      CLIENT_ID: ${CLIENT_ID}
+#      PRIVATE_KEY: ${PRIVATE_KEY}
+#      CLIENT_URL: ${CLIENT_URL}
