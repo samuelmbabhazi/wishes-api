@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgres://wish_user:ezTQZz28GACiUVzPO9aeAksYpPeK9jUd@dpg-ckn9am91rp3c73a0020g-a/wish"
 }
 
 model Wish {
